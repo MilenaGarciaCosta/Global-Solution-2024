@@ -154,7 +154,7 @@ border-radius: 10px;
 
 /* Sections */
 .conteudo-container{
-  padding: 40px;
+  padding: 0 40px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@ border-radius: 10px;
   top: 0;
 }
 
-#apresentacao-section .conteudo-container{
+#apresentacao-section .conteudo-container-absolute{
   height: 80%;
   display: flex;
   align-items: end;
@@ -214,6 +214,8 @@ h4{
 footer{
   display: flex;
   justify-content: center;
+  background-color: rgba(21,36,54,1);
+  color: #f2f2f2;
 }
 
 /* Responsividade mobile */
