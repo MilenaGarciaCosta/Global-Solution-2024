@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Configurações gerais */
 * {
   margin: 0;
   padding: 0;
   font-family: var(--montserrat-fonte);
+  scroll-behavior: smooth;
 }
 
-:root{
+:root {
   --montserrat-fonte: "Montserrat", sans-serif;
 }
 
@@ -21,7 +22,12 @@ section {
   margin-left: 5.1vw;
 }
 
-img, h1, h2, h3, h4{
+.ativo {
+  background-color: rgb(120, 192, 194);
+  border-radius: 10px 0 0 10px;
+}
+
+img, h1, h2, h3, h4 {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -52,53 +58,59 @@ img, h1, h2, h3, h4{
 }
 
 /* Navbar */
-.menu-lateral{
+.menu-lateral {
   width: 60px;
   height: 100vh;
-  background: rgb(75,114,153);
-  background: linear-gradient(180deg, rgba(75,114,153,1) 9%, rgba(46,72,100,1) 37%, rgba(28,47,68,1) 63%, rgba(21,36,54,1) 79%);
+  background: rgb(75, 114, 153);
+  background: linear-gradient(
+    180deg,
+    rgba(75, 114, 153, 1) 9%,
+    rgba(46, 72, 100, 1) 37%,
+    rgba(28, 47, 68, 1) 63%,
+    rgba(21, 36, 54, 1) 79%
+  );
   padding: 40px 0 40px 1%;
   box-shadow: 3px 0 0 rgba(120, 192, 194, 0.377);
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: .2s;
+  transition: 0.2s;
   z-index: 1;
 }
 
-.menu-lateral:hover{
+.expandir {
   width: 280px;
 }
 
-.btn-expandir{
+.btn-expandir {
   width: 100%;
 }
 
-nav img{
+nav img {
   height: 25px;
   cursor: pointer;
   padding-left: 10px;
 }
 
-nav ul{
+nav ul {
   list-style: none;
 }
 
-nav li{
+nav li {
   transition: 1s;
 }
 
-nav li:hover{
-background-color: rgba(120, 192, 194, 0.377);
-border-radius: 10px;
+nav li:hover {
+  background-color: rgba(120, 192, 194, 0.377);
+  border-radius: 10px 0 0 10px;
 }
 
-.item-menu{
+.item-menu {
   padding: 20px 0;
 }
 
-.item-menu a{
+.item-menu a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 15px;
@@ -109,24 +121,29 @@ border-radius: 10px;
 }
 
 /* Fundo de bolhas */
-#apresentacao-section{
-  background: rgb(61,82,105);
-  background: linear-gradient(180deg, rgba(61,82,105,1) 11%, rgba(28,47,68,1) 48%, rgba(21,36,54,1) 79%);
+#apresentacao-section {
+  background: rgb(61, 82, 105);
+  background: linear-gradient(
+    180deg,
+    rgba(61, 82, 105, 1) 11%,
+    rgba(28, 47, 68, 1) 48%,
+    rgba(21, 36, 54, 1) 79%
+  );
 }
 
-.container{
+.container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.bubbles{
+.bubbles {
   position: relative;
   display: flex;
 }
 
-.bubbles span{
+.bubbles span {
   position: relative;
   width: 20px;
   height: 20px;
@@ -135,25 +152,25 @@ border-radius: 10px;
   border-radius: 50%;
   box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
   animation: animate 15s linear infinite;
-  animation-duration: calc(125s/ var(--i));
+  animation-duration: calc(125s / var(--i));
 }
 
-.bubbles span:nth-child(even){
+.bubbles span:nth-child(even) {
   background-color: #42daac;
   box-shadow: 0 0 0 10px #42daac67, 0 0 50px #42daac, 0 0 100px #42daac;
 }
 
-@keyframes animate{
-  0%{
+@keyframes animate {
+  0% {
     transform: translateY(100vh) scale(0);
   }
-  100%{
+  100% {
     transform: translateY(0vh) scale(1);
   }
 }
 
 /* Sections */
-.conteudo-container{
+.conteudo-container {
   padding: 0 40px;
   height: 100%;
   display: flex;
@@ -162,72 +179,72 @@ border-radius: 10px;
   justify-content: center;
 }
 
-.absolute{
+.absolute {
   position: absolute;
   top: 0;
 }
 
-#apresentacao-section .conteudo-container-absolute{
+#apresentacao-section .conteudo-container-absolute {
   height: 80%;
   display: flex;
   align-items: end;
   margin-left: 9vw;
 }
 
-#apresentacao-section .conteudo-container div div{
+#apresentacao-section .conteudo-container div div {
   height: 17vh;
   display: flex;
   align-items: end;
 }
 
-#apresentacao-section .conteudo-container div div img{
+#apresentacao-section .conteudo-container-absolute div div img {
   cursor: pointer;
 }
 
-h1{
+h1 {
   color: #f2f2f2;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 4.5vw;
 }
 
-h2{
+h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 3vh;
 }
 
-h3{
+h3 {
   color: #f2f2f2;
   font-weight: 200;
   letter-spacing: 2px;
   font-size: 1.5vw;
 }
 
-h4{
+h4 {
   font-size: 12px;
   font-weight: 300;
   padding: 10px 0;
 }
 
 /* Footer */
-footer{
+footer {
   display: flex;
   justify-content: center;
-  background-color: rgba(21,36,54,1);
+  background-color: rgba(21, 36, 54, 1);
   color: #f2f2f2;
 }
 
 /* Responsividade mobile */
-@media (max-width:800px) {
-  h1{
+@media (max-width: 800px) {
+  h1 {
     color: #f2f2f2;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 7vw;
   }
-  
-  h3{
+
+  h3 {
     color: #f2f2f2;
     font-weight: 200;
     letter-spacing: 2px;
