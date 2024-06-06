@@ -358,23 +358,59 @@ h6 {
   font-size: 13px;
 }
 
-#objetivos-section{
+#objetivos-section {
   background-image: url(media/superficie-do-oceano.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#objetivos-section h2{
+#objetivos-section h2 {
   color: #f2f2f2;
 }
 
-#objetivos-section p{
+#objetivos-section p {
   width: 50vw;
   text-align: justify;
 }
 
-#breaker{
-  margin: 20px 10px;
+#tecnologias-section {
+  background-image: url(media/tecnologias-fundo.png);
+  background-size: cover;
+}
+
+.conteudo-container.tecnologia {
+  color: #f2f2f2;
+}
+
+.itens-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 65px;
+}
+
+.item-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-div img {
+  height: 17vh;
+  filter: drop-shadow(1px 6px 5px #131313);
+  -webkit-filter: drop-shadow(1px 6px 5px #131313);
+  -moz-filter: drop-shadow(1px 6px 5px #131313);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.item-div img:hover {
+  filter: drop-shadow(2px 2px 7px #224f61);
+  -webkit-filter: drop-shadow(2px 2px 7px #224f61);
+  -moz-filter: drop-shadow(2px 2px 7px #224f61);
 }
 
 /* Footer */
@@ -435,14 +471,18 @@ footer {
     font-size: 10px;
   }
 
-  #objetivos-section p{
+  #objetivos-section p {
     width: fit-content;
     text-align: justify;
+  }
+
+  .item-div img {
+    height: 10vh;
   }
 }
 
 @media (max-width: 800px) {
-  .conteudo-container p{
+  .conteudo-container p {
     font-size: 13px;
     width: fit-content;
   }
