@@ -404,13 +404,65 @@ h6 {
   -moz-filter: drop-shadow(1px 6px 5px #131313);
   margin-bottom: 20px;
   border-radius: 10px;
-  transition: .2s;
+  transition: 0.2s;
+  filter: grayscale(100%) invert(100%);
+  -webkit-filter: grayscale(100%) invert(100%);
+  -moz-filter: grayscale(100%) invert(100%);
 }
 
 .item-div img:hover {
   filter: drop-shadow(2px 2px 7px #224f61);
   -webkit-filter: drop-shadow(2px 2px 7px #224f61);
   -moz-filter: drop-shadow(2px 2px 7px #224f61);
+}
+
+#beneficios-section {
+  background-image: url(media/horizonte-oceano.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #11343f;
+}
+
+.bolha {
+  background-color: #11343f;
+  width: fit-content;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -1px 7px 15px -3px rgba(17, 52, 63, 0.67);
+  -webkit-box-shadow: -1px 7px 15px -3px rgba(17, 52, 63, 0.67);
+  -moz-box-shadow: -1px 7px 15px -3px rgba(17, 52, 63, 0.67);
+}
+
+.conteudo-beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.tamP {
+  width: 120px;
+  height: 120px;
+  background-color: #124e61;
+}
+
+.tamM {
+  width: 180px;
+  height: 180px;
+}
+
+.tamG {
+  width: 260px;
+  height: 260px;
+}
+
+.bolha p {
+  padding: 20px;
+  text-align: center;
 }
 
 /* Footer */
@@ -482,13 +534,33 @@ footer {
 }
 
 @media (max-width: 800px) {
-  .conteudo-container p {
+  .conteudo-container p{
     font-size: 13px;
     width: fit-content;
   }
 
   .fixa {
     padding: 20px;
+  }
+
+  .bolha p{
+    padding: 0 8px;
+  }
+
+  .tamP {
+    width: 80px;
+    height: 80px;
+    background-color: #124e61;
+  }
+  
+  .tamM {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .tamG {
+    width: 150px;
+    height: 150px;
   }
 }
 
