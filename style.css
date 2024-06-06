@@ -19,7 +19,7 @@
 
 section {
   height: 100vh;
-  margin-left: 5.1vw;
+  margin-left: 3.7vw;
 }
 
 .ativo {
@@ -27,7 +27,11 @@ section {
   border-radius: 10px 0 0 10px;
 }
 
-img, h1, h2, h3, h4 {
+img,
+h1,
+h2,
+h3,
+h4 {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -69,7 +73,6 @@ img, h1, h2, h3, h4 {
     rgba(28, 47, 68, 1) 63%,
     rgba(21, 36, 54, 1) 79%
   );
-  padding: 40px 0 40px 1%;
   box-shadow: 3px 0 0 rgba(120, 192, 194, 0.377);
   position: fixed;
   top: 0;
@@ -80,17 +83,17 @@ img, h1, h2, h3, h4 {
 }
 
 .expandir {
-  width: 280px;
+  width: 270px;
 }
 
 .btn-expandir {
-  width: 100%;
+  padding-top: 40px;
 }
 
 nav img {
   height: 25px;
   cursor: pointer;
-  padding-left: 10px;
+  padding: 0 0 0 16.5px;
 }
 
 nav ul {
@@ -125,9 +128,9 @@ nav li:hover {
   background: rgb(61, 82, 105);
   background: linear-gradient(
     180deg,
-    rgba(61, 82, 105, 1) 11%,
-    rgba(28, 47, 68, 1) 48%,
-    rgba(21, 36, 54, 1) 79%
+    rgba(28, 47, 68, 1) 11%,
+    rgb(10, 22, 37) 40%,
+    #08050e 79%
   );
 }
 
@@ -179,6 +182,11 @@ nav li:hover {
   justify-content: center;
 }
 
+.section-conteudo {
+  display: flex;
+  justify-content: center;
+}
+
 .absolute {
   position: absolute;
   top: 0;
@@ -199,19 +207,28 @@ nav li:hover {
 
 #apresentacao-section .conteudo-container-absolute div div img {
   cursor: pointer;
+  margin-top: 30px;
 }
 
 h1 {
   color: #f2f2f2;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 4.5vw;
+}
+
+.conteudo-container-absolute strong {
+  font-weight: 400;
+  font-size: 50px;
+  opacity: 0.6;
 }
 
 h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 3vh;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 h3 {
@@ -227,6 +244,139 @@ h4 {
   padding: 10px 0;
 }
 
+#problema-section {
+  background-color: #08050e;
+  background-image: url(media/fundo-do-oceano.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#problema-section h2,
+p {
+  color: #f2f2f2;
+}
+
+.conteudo-problema {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.conteudo-problema p {
+  width: 40vw;
+  padding: 3px;
+  line-height: 25px;
+  height: fit-content;
+  text-align: justify;
+}
+
+.img-peixe-lineart img {
+  width: 350px;
+}
+
+#solucao-section {
+  background-color: #224f61;
+  color: #f2f2f2;
+}
+
+.fixa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #538392;
+  height: fit-content;
+  padding: 40px;
+  border-radius: 0 10px 10px 10px;
+  gap: 8vw;
+  box-shadow: 6px 7px 8px -3px rgba(36, 36, 36, 0.75);
+  -webkit-box-shadow: 6px 7px 8px -3px rgba(36, 36, 36, 0.75);
+  -moz-box-shadow: 6px 7px 8px -3px rgba(36, 36, 36, 0.75);
+}
+.fixa p {
+  width: 40vw;
+  text-align: justify;
+}
+
+#grupo-btn-solucao {
+  display: flex;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.btn-solucao {
+  background-color: #538392;
+  height: fit-content;
+  width: fit-content;
+  padding: 7px 20px;
+  border-radius: 10px 10px 0 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.selecionado {
+  background-color: #11343f;
+  color: #d5f2ff;
+  box-shadow: 6px -9px 8px -3px rgba(36, 36, 36, 0.75) inset;
+  -webkit-box-shadow: 6px -9px 8px -3px rgba(36, 36, 36, 0.75) inset;
+  -moz-box-shadow: 6px -9px 8px -3px rgba(36, 36, 36, 0.75) inset;
+}
+
+.lixeira-height {
+  height: 40vh;
+}
+
+.drone-height {
+  height: 20vh;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.info-container p {
+  margin-top: 10px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h6 {
+  margin-top: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #074558;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#objetivos-section{
+  background-image: url(media/superficie-do-oceano.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#objetivos-section h2{
+  color: #f2f2f2;
+}
+
+#objetivos-section p{
+  width: 50vw;
+  text-align: justify;
+}
+
+#breaker{
+  margin: 20px 10px;
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -236,18 +386,78 @@ footer {
 }
 
 /* Responsividade mobile */
-@media (max-width: 800px) {
+@media (max-width: 560px) {
   h1 {
-    color: #f2f2f2;
-    font-weight: 500;
-    text-transform: uppercase;
     font-size: 7vw;
   }
 
+  .conteudo-container {
+    padding: 0 20px;
+    margin-left: 13%;
+  }
+
+  .conteudo-container-absolute .titulo {
+    margin-left: 13%;
+  }
+
+  .conteudo-container-absolute strong {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
   h3 {
-    color: #f2f2f2;
-    font-weight: 200;
-    letter-spacing: 2px;
-    font-size: 3.5vw;
+    font-size: 3vw;
+  }
+
+  h4 {
+    font-size: 8px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  .bubbles span {
+    width: 20px;
+    height: 8px;
+  }
+
+  .img-peixe-lineart img {
+    filter: drop-shadow(#1b1b1b);
+    width: 70vw;
+  }
+
+  .btn-solucao,
+  h6 {
+    font-size: 10px;
+  }
+
+  #objetivos-section p{
+    width: fit-content;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 800px) {
+  .conteudo-container p{
+    font-size: 13px;
+    width: fit-content;
+  }
+
+  .fixa {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 890px) {
+  .lixeira-height {
+    height: 28vh;
+  }
+
+  .drone-height {
+    height: 10vh;
   }
 }

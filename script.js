@@ -1,21 +1,82 @@
-//Menu selecionado
-const menuItem = document.querySelectorAll('.item-menu');
-
-function selectLink() {
-    menuItem.forEach((item) =>
-        item.classList.remove('ativo')
-    )
-    this.classList.add('ativo')
-}
-
-menuItem.forEach((item) =>
-    item.addEventListener('click', selectLink)
-)
-
- // Expandir o menu
+// Expandir o menu
 const btnExpandir = document.querySelector('.btn-expandir')
 const menuLateral = document.querySelector('.menu-lateral')
 
-btnExpandir.addEventListener('click', function() {
+btnExpandir.addEventListener('click', function () {
     menuLateral.classList.toggle('expandir')
+})
+
+// Sinalizar em qual seção o usuário está
+document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.section-conteudo');
+    const menuItems = document.querySelectorAll('.item-menu');
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    sections.forEach(section => {
+        const sectionId = `#${section.id}`;
+        const menuItem = document.querySelector(`.item-menu[data-target="${sectionId}"]`);
+
+        if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+            if (menuItem) {
+                menuItem.classList.add('ativo');
+            }
+        } else {
+            section.classList.remove('ativo');
+            if (menuItem) {
+                menuItem.classList.remove('ativo');
+            }
+        }
+    });
+});
+
+// Alterar o conteúdo de acordo com a solução selecionada
+const lixeiraBtn = document.querySelector('#lixeira-btn')
+const droneBtn = document.querySelector('#drone-btn')
+const img = document.querySelector('#img-solucao');
+const conteudo = document.querySelector('.info-container');
+
+lixeiraBtn.addEventListener('click', () => {
+    img.classList.remove('drone-height')
+    img.classList.add('lixeira-height')
+    lixeiraBtn.classList.remove('selecionado')
+    droneBtn.classList.add('selecionado')
+
+    img.setAttribute('src', `media/lixeira-premiada.png`);
+    img.setAttribute('alt', `Protótipo lixeira premiada`);
+
+    conteudo.innerHTML = `
+    <h5>Lixeira Premiada</h5>
+    <br>
+    <p>
+      &emsp;&emsp; Este projeto visa garantir que o plástico seja destinado a empresas que necessitam de plástico reciclável em sua produção para evitar seu descarte incorreto.
+    </p>
+    <br>
+    <p>
+      &emsp;&emsp; Utilizando um método de recompensa, ao descartar o plástico na lixeira, o usuário é premiado em dinheiro proporcionalmente ao tipo de plástico e à quantidade/peso descartado.
+    </p>
+    <a href="https://github.com/guta231/Lixeira-Premiada" target="_blank"><h6>Saiba mais</h6></a>
+    `
+});
+
+droneBtn.addEventListener('click', () => {
+    img.classList.remove('lixeira-height')
+    img.classList.add('drone-height')
+    lixeiraBtn.classList.add('selecionado')
+    droneBtn.classList.remove('selecionado')
+
+    img.setAttribute('src', `media/drone.png`);
+    img.setAttribute('alt', `Protótipo drone BlueGuard`);
+
+    conteudo.innerHTML = `
+    <h5>BlueGuard</h5>
+    <br>
+    <p>
+      &emsp;&emsp; Os BlueGuards são drones inteligentes capazes de identificar e sinalizar resíduos poluentes nos oceanos em tempo real, auxiliando na limpeza marinha e ajudando ONGs dedicadas à sustentabilidade oceânica. 
+    </p>
+    <br>
+    <p>
+      &emsp;&emsp; Além disso, os dados coletados pelos drones podem ser usados para monitorar a eficácia das iniciativas de limpeza e orientar políticas ambientais futuras.
+    </p>
+    <a href="https://github.com/medeirossteffany/Deteccao_lixos_oceanos" target="_blank"><h6>Saiba mais</h6></a>
+    `
 })

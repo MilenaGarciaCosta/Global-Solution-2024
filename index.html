@@ -11,11 +11,10 @@
     <nav class="menu-lateral">
       <div class="btn-expandir">
           <img src="media/menu-de-hamburguer.png" alt="Menu hambúrguer" />
-        </label>
       </div>
       <br />
       <ul>
-        <li class="item-menu">
+        <li class="item-menu" data-target="#problema-section">
           <a href="#problema-section">
             <span class="icon"
               ><img src="media/problema.png" alt="Problema"
@@ -24,16 +23,16 @@
           </a>
         </li>
 
-        <li class="item-menu">
+        <li class="item-menu" data-target="#solucao-section">
           <a href="#solucao-section">
             <span class="icon"
               ><img src="media/solucao.png" alt="Nossa solução"
             /></span>
-            <span class="txt-link">Nossa solução</span>
+            <span class="txt-link">Soluções</span>
           </a>
         </li>
 
-        <li class="item-menu">
+        <li class="item-menu" data-target="#tecnologias-section">
           <a href="#tecnologias-section">
             <span class="icon"
               ><img src="media/tecnologia.png" alt="Tecnologias"
@@ -42,7 +41,7 @@
           </a>
         </li>
 
-        <li class="item-menu">
+        <li class="item-menu" data-target="#objetivos-section">
           <a href="#objetivos-section">
             <span class="icon"
               ><img src="media/objetivo.png" alt="Objetivos"
@@ -51,14 +50,14 @@
           </a>
         </li>
 
-        <li class="item-menu">
+        <li class="item-menu" data-target="#beneficios-section">
           <a href="#beneficios-section">
             <span class="icon"><img src="media/beneficios.png" alt="" /></span>
             <span class="txt-link">Benefícios</span>
           </a>
         </li>
 
-        <li class="item-menu">
+        <li class="item-menu" data-target="#publico-section">
           <a href="#publico-section">
             <span class="icon"
               ><img src="media/publico.png" alt="Público impactado"
@@ -68,7 +67,7 @@
         </li>
       </ul>
     </nav>
-
+    
     <section id="apresentacao-section">
         <div class="container">
             <div class="bubbles">
@@ -141,8 +140,8 @@
             </div>
         </div>
         <div class="conteudo-container-absolute absolute">
-            <div>
-                <h1>Nome do grupo</h1>
+            <div class="titulo">
+                <h1>GreenMarine <strong>tech.</strong></h1>
                 <h3>Preservando os oceanos por meio da tecnologia</h3>
                 <div>
                     <a href="#problema-section"><img src="media/flecha.png" alt="Flecha para baixo"></a>
@@ -151,29 +150,51 @@
         </div>
     </section>
 
-    <section id="problema-section">
+    <section id="problema-section" class="section-conteudo">
         <div class="conteudo-container">
             <h2>Problema</h2>
-            <div class="conteudo">
+            <div class="conteudo-problema">
                 <p>
-                    A poluição marinha vem sendo um problema enfrentado pelo planeta desde que o ser humano começou a produzir lixo. O descarte inadequado de resíduos, especialmente o plástico, um material que em média demora 500 anos para se decompor na natureza, acarretou diversos problemas ao meio ambiente, como impacto na vida marinha, contaminação química, microplásticos, destruição de habitats, poluição estética, emissão de gases de efeito estufa, entre outros inúmeros efeitos negativos que a poluição marinha traz. O principal poluidor é o plástico. 
+                  &emsp;&emsp; O descarte inadequado de resíduos, especialmente o plástico, um material que em média demora 500 anos para se decompor na natureza, acarretou diversos problemas ao meio ambiente, como impacto na vida marinha, contaminação química, microplásticos, destruição de habitats, poluição estética, emissão de gases de efeito estufa, entre outros. O principal poluidor é o plástico. 
                 </p>
+                <div class="img-peixe-lineart">
+                  <img src="media/cardume-de-plastico.png" alt="Lineart de um peixe feito de sacola plástica">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="solucao-section">
+    <section id="solucao-section" class="section-conteudo">
         <div class="conteudo-container">
-            <h2>Nossa solução</h2>
-            <div class="conteudo">
-                <p>
-                    
-                </p>
+            <h2>Nossas soluções</h2>
+            <div class="conteudo-solucao">
+              <div id="grupo-btn-solucao">
+                <div id="lixeira-btn" class="btn-solucao">
+                  Lixeira premiada
+                </div>
+                <div id="drone-btn" class="btn-solucao selecionado">
+                  BlueGuard
+                </div>
+              </div>
+              <div class="fixa">
+                <img src="media/lixeira-premiada.png" alt="Protótipo lixeira premiada" id="img-solucao" class="lixeira-height">
+                <div class="info-container">
+                  <h5>Lixeira Premiada</h5>
+                  <br>
+                  <p>
+                    &emsp;&emsp; Este projeto visa garantir que o plástico seja destinado a empresas que necessitam de plástico reciclável em sua produção para evitar seu descarte incorreto.
+                  </p>
+                  <p>
+                    &emsp;&emsp; Utilizando um método de recompensa, ao descartar o plástico na lixeira, o usuário é premiado em dinheiro proporcionalmente ao tipo de plástico e à quantidade/peso descartado.
+                  </p>
+                  <a href="https://github.com/guta231/Lixeira-Premiada" target="_blank"><h6>Saiba mais</h6></a>
+                </div>
+              </div>
             </div>
         </div>
     </section>
 
-    <section id="tecnologias-section">
+    <section id="tecnologias-section" class="section-conteudo">
         <div class="conteudo-container">
             <h2>Tecnologias utilizadas</h2>
             <div class="conteudo">
@@ -184,35 +205,31 @@
         </div>
     </section>
 
-    <section id="objetivos-section">
+    <section id="objetivos-section" class="section-conteudo">
         <div class="conteudo-container">
             <h2>Objetivos do projeto</h2>
-            <div class="conteudo">
+            <div class="conteudo-objetivos">
                 <p>
-                    
+                  &emsp;&emsp; Utilizar a recompensa da lixeira para chamar a atenção das pessoas que não tiveram uma educação adequada sobre o meio ambiente, para que, com o tempo, possam se tornar cada vez mais conscientes e encaminhem o plástico que normalmente é jogado na rua ao seu devido lugar de reciclagem.
+                </p>
+                <p id="breaker">. . . . . . .</p>
+                <p>
+                  &emsp;&emsp; Entregar BlueGuards às ONGs que promovem a sustentabilidade oceânica para ajudar na limpeza de resíduos poluentes, visando retardar a sua poluição.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="beneficios-section">
+    <section id="beneficios-section" class="section-conteudo">
         <div class="conteudo-container">
             <h2>Benefícios oferecidos</h2>
             <div class="conteudo">
-                <p>
-                    Nosso objetivo engloba tanto a reeducação da sociedade, contribuindo cada vez mais para a conscientização ambiental, quanto para retardar a poluição, da qual, infelizmente, ainda estamos longe de alcançar um mundo sustentável.
-                </p>
-                <p>
-                    Em relação à Lixeira Premiada, o objetivo é utilizar a recompensa para chamar a atenção das pessoas que não tiveram uma educação adequada sobre o meio ambiente, para que, com o tempo, possam se tornar cada vez mais conscientes e encaminhem o plástico que normalmente é jogado na rua ao seu devido lugar de reciclagem, ao invés de acabar nos mares e oceanos, tornando-se apto para o consumo humano novamente.
-                </p>
-                <p>
-                    Quanto ao ECODRONE, nosso principal objetivo é entregar o produto às ONGs que promovem a sustentabilidade oceânica para ajudar na limpeza de resíduos poluentes, visando retardar a poluição enquanto nossa sociedade se reestrutura ao longo do tempo.
-                </p>
+              
             </div>
         </div>
     </section>
 
-    <section id="publico-section">
+    <section id="publico-section" class="section-conteudo">
         <div class="conteudo-container">
             <h2>Público impactado</h2>
             <div class="conteudo">
