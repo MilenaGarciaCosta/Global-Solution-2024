@@ -547,6 +547,50 @@ footer {
   padding-top: 20px;
 }
 
+
+footer strong{
+  font-weight: 600;
+}
+
+footer span{
+  font-weight: 300;
+  margin: 3px 0 20px 0;
+  font-size: 13px;
+}
+
+footer .texto{
+  display: flex;
+  flex-direction: column;
+}
+
+#emailForm{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#emailForm #email{
+  height: 25px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding-left: 8px;
+}
+
+#formulario-btn{
+  height: 25px;
+  padding: 0 10px;
+  color: var(--branco);
+  background-color: var(--azul-fixaSolucoes);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#formulario-btn:hover{
+  background-color: var(--branco);
+  color: var(--azul-fixaSolucoes);
+}
+
 /* Responsividade mobile */
 @media (max-width: 560px) {
   h1 {
@@ -626,6 +670,33 @@ footer {
 
   footer{
     margin-left: 13%;
+  }
+
+  footer strong{
+    font-size: 12px;
+  }
+  
+  footer span{
+    font-size: 10px;
+  }
+  
+  #emailForm{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 8px;
+  }
+  
+  #emailForm #email{
+    height: 20px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding-left: 8px;
+  }
+  
+  #formulario-btn{
+    height: 20px;
+    font-size: 10px;
   }
 }
 

@@ -87,3 +87,19 @@ function nextImage(){
     }
     document.getElementById('radio'+count).checked = true;
 }
+
+// Validação de e-mail
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var email = document.getElementById('email').value;
+    if (validateEmail(email)) {
+        alert('Bem vindo a família GreenMarine TECH!');
+    } else {
+        alert('E-mail inválido, tente novamente.');
+    }
+});
+
+function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
