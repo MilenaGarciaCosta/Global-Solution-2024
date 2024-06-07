@@ -465,6 +465,20 @@ h6 {
   text-align: center;
 }
 
+#publico-section{
+  background-image: url(media/tartaruga-no-oceano.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  color: #11343f;
+}
+
+.conteudo-publico p{
+  color: #11343f;
+  width: 60vw;
+  text-align: justify;
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -561,6 +575,15 @@ footer {
   .tamG {
     width: 150px;
     height: 150px;
+  }
+
+  #publico-section{
+    color: #f2f2f2;
+  }
+
+  .conteudo-publico p{
+    width: 60vw;
+    color: #f2f2f2;
   }
 }
 
