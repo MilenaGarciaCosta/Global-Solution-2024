@@ -245,7 +245,7 @@ h3 {
 h4 {
   font-size: 12px;
   font-weight: 300;
-  padding: 10px 0;
+  padding: 30px 0 10px 0;
 }
 
 #problema-section {
@@ -406,12 +406,6 @@ h6 {
   -moz-filter: grayscale(100%) invert(100%);
 }
 
-.item-div img:hover {
-  filter: drop-shadow(2px 2px 7px #224f61);
-  -webkit-filter: drop-shadow(2px 2px 7px #224f61);
-  -moz-filter: drop-shadow(2px 2px 7px #224f61);
-}
-
 #beneficios-section {
   background-image: url(media/horizonte-oceano.png);
   background-size: cover;
@@ -462,11 +456,14 @@ h6 {
 }
 
 #publico-section {
-  background-image: url(media/tartaruga-no-oceano.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: right;
+background-color: var(--azul-fixaSolucoes);
   color: #11343f;
+}
+
+.conteudo-publico{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .conteudo-publico p {
@@ -475,12 +472,79 @@ h6 {
   text-align: justify;
 }
 
+/* Slide show */
+.slider{
+  width: 50vw;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.slides{
+  width: 400%;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 25%;
+  position: relative;
+  transition: .2s;
+}
+
+.slide img{
+  width: 50vw;
+}
+
+.navigation-manual{
+  position: absolute;
+  width: 50vw;
+  margin-top: -8vh;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.manual-btn{
+  border: 1px solid var(--branco);
+  padding: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.manual-btn:hover{
+  background-color: #f2f2f281;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -75%;
+}
+
 /* Footer */
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: rgba(21, 36, 54, 1);
   color: var(--branco);
+  margin-left: 4.3vw;
+  padding-top: 20px;
 }
 
 /* Responsividade mobile */
@@ -540,6 +604,28 @@ footer {
 
   .item-div img {
     height: 10vh;
+  }
+
+    .slide img{
+    width: 60vw;
+  }
+
+  .slider{
+    width: 60vw;
+    margin-top: 40px;
+  }
+
+  .navigation-manual{
+    width: 60vw;
+    margin-top: -20px;
+  }
+
+  .manual-btn{
+    padding: 3px;
+  }
+
+  footer{
+    margin-left: 13%;
   }
 }
 

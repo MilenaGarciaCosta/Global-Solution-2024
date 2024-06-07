@@ -47,13 +47,9 @@ lixeiraBtn.addEventListener('click', () => {
     conteudo.innerHTML = `
     <h5>Lixeira Premiada</h5>
     <br>
-    <p>
-      &emsp;&emsp; Este projeto visa garantir que o plástico seja destinado a empresas que necessitam de plástico reciclável em sua produção para evitar seu descarte incorreto.
-    </p>
-    <br>
-    <p>
-      &emsp;&emsp; Utilizando um método de recompensa, ao descartar o plástico na lixeira, o usuário é premiado em dinheiro proporcionalmente ao tipo de plástico e à quantidade/peso descartado.
-    </p>
+        <p>
+            &emsp;&emsp; Utilizando um método de recompensa, este projeto visa garantir que o plástico seja destinado a empresas que necessitam de plástico reciclável em sua produção para evitar seu descarte incorreto.
+        </p>
     <a href="https://github.com/guta231/Lixeira-Premiada" target="_blank"><h6>Saiba mais</h6></a>
     `
 });
@@ -73,10 +69,21 @@ droneBtn.addEventListener('click', () => {
     <p>
       &emsp;&emsp; Os BlueGuards são drones inteligentes capazes de identificar e sinalizar resíduos poluentes nos oceanos em tempo real, auxiliando na limpeza marinha e ajudando ONGs dedicadas à sustentabilidade oceânica. 
     </p>
-    <br>
-    <p>
-      &emsp;&emsp; Além disso, os dados coletados pelos drones podem ser usados para monitorar a eficácia das iniciativas de limpeza e orientar políticas ambientais futuras.
-    </p>
     <a href="https://github.com/medeirossteffany/Deteccao_lixos_oceanos" target="_blank"><h6>Saiba mais</h6></a>
     `
 })
+
+// Slide automático
+let count = 1;
+
+setInterval(function () {
+    nextImage();
+}, 2000)
+
+function nextImage(){
+    count++;
+    if (count > 4){
+        count = 1
+    }
+    document.getElementById('radio'+count).checked = true;
+}
