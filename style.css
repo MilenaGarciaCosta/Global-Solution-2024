@@ -10,11 +10,16 @@
 
 :root {
   --montserrat-fonte: "Montserrat", sans-serif;
+  --branco: #f2f2f2;
+  --azul-baixaOpacidade: rgba(120, 192, 194, 0.377);
+  --azul-bolha1: #4fc3dc;
+  --azul-bolha2: #42daac;
+  --azul-fixaSolucoes: #538392;
 }
 
 ::selection {
   background-color: #224f61;
-  color: #f2f2f2;
+  color: var(--branco);
 }
 
 section {
@@ -73,7 +78,7 @@ h4 {
     rgba(28, 47, 68, 1) 63%,
     rgba(21, 36, 54, 1) 79%
   );
-  box-shadow: 3px 0 0 rgba(120, 192, 194, 0.377);
+  box-shadow: 3px 0 0 var(--azul-baixaOpacidade);
   position: fixed;
   top: 0;
   left: 0;
@@ -105,7 +110,7 @@ nav li {
 }
 
 nav li:hover {
-  background-color: rgba(120, 192, 194, 0.377);
+  background-color: var(--azul-baixaOpacidade);
   border-radius: 10px 0 0 10px;
 }
 
@@ -114,7 +119,7 @@ nav li:hover {
 }
 
 .item-menu a {
-  color: #f2f2f2;
+  color: var(--branco);
   text-decoration: none;
   font-size: 15px;
   display: flex;
@@ -125,7 +130,6 @@ nav li:hover {
 
 /* Fundo de bolhas */
 #apresentacao-section {
-  background: rgb(61, 82, 105);
   background: linear-gradient(
     180deg,
     rgba(28, 47, 68, 1) 11%,
@@ -150,17 +154,17 @@ nav li:hover {
   position: relative;
   width: 20px;
   height: 20px;
-  background-color: #4fc3dc;
+  background-color: var(--azul-bolha1);
   margin: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px var(--azul-bolha1), 0 0 100px var(--azul-bolha1);
   animation: animate 15s linear infinite;
   animation-duration: calc(125s / var(--i));
 }
 
 .bubbles span:nth-child(even) {
-  background-color: #42daac;
-  box-shadow: 0 0 0 10px #42daac67, 0 0 50px #42daac, 0 0 100px #42daac;
+  background-color: var(--azul-bolha2);
+  box-shadow: 0 0 0 10px #42daac67, 0 0 50px var(--azul-bolha2), 0 0 100px var(--azul-bolha2);
 }
 
 @keyframes animate {
@@ -211,7 +215,7 @@ nav li:hover {
 }
 
 h1 {
-  color: #f2f2f2;
+  color: var(--branco);
   font-weight: 400;
   text-transform: uppercase;
   font-size: 4.5vw;
@@ -232,7 +236,7 @@ h2 {
 }
 
 h3 {
-  color: #f2f2f2;
+  color: var(--branco);
   font-weight: 200;
   letter-spacing: 2px;
   font-size: 1.5vw;
@@ -252,8 +256,8 @@ h4 {
 }
 
 #problema-section h2,
-p {
-  color: #f2f2f2;
+p, #objetivos-section h2, .conteudo-container.tecnologia{
+  color: var(--branco);
 }
 
 .conteudo-problema {
@@ -277,7 +281,7 @@ p {
 
 #solucao-section {
   background-color: #224f61;
-  color: #f2f2f2;
+  color: var(--branco);
 }
 
 .fixa {
@@ -286,7 +290,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #538392;
+  background-color: var(--azul-fixaSolucoes);
   height: fit-content;
   padding: 40px;
   border-radius: 0 10px 10px 10px;
@@ -307,7 +311,7 @@ p {
 }
 
 .btn-solucao {
-  background-color: #538392;
+  background-color: var(--azul-fixaSolucoes);
   height: fit-content;
   width: fit-content;
   padding: 7px 20px;
@@ -364,10 +368,6 @@ h6 {
   background-repeat: no-repeat;
 }
 
-#objetivos-section h2 {
-  color: #f2f2f2;
-}
-
 #objetivos-section p {
   width: 50vw;
   text-align: justify;
@@ -376,10 +376,6 @@ h6 {
 #tecnologias-section {
   background-image: url(media/tecnologias-fundo.png);
   background-size: cover;
-}
-
-.conteudo-container.tecnologia {
-  color: #f2f2f2;
 }
 
 .itens-container {
@@ -465,7 +461,7 @@ h6 {
   text-align: center;
 }
 
-#publico-section{
+#publico-section {
   background-image: url(media/tartaruga-no-oceano.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -473,7 +469,7 @@ h6 {
   color: #11343f;
 }
 
-.conteudo-publico p{
+.conteudo-publico p {
   color: #11343f;
   width: 60vw;
   text-align: justify;
@@ -484,7 +480,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: rgba(21, 36, 54, 1);
-  color: #f2f2f2;
+  color: var(--branco);
 }
 
 /* Responsividade mobile */
@@ -548,7 +544,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-  .conteudo-container p{
+  .conteudo-container p {
     font-size: 13px;
     width: fit-content;
   }
@@ -557,7 +553,7 @@ footer {
     padding: 20px;
   }
 
-  .bolha p{
+  .bolha p {
     padding: 0 8px;
   }
 
@@ -566,24 +562,24 @@ footer {
     height: 80px;
     background-color: #124e61;
   }
-  
+
   .tamM {
     width: 100px;
     height: 100px;
   }
-  
+
   .tamG {
     width: 150px;
     height: 150px;
   }
 
-  #publico-section{
-    color: #f2f2f2;
+  #publico-section {
+    color: var(--branco);
   }
 
-  .conteudo-publico p{
+  .conteudo-publico p {
     width: 60vw;
-    color: #f2f2f2;
+    color: var(--branco);
   }
 }
 
