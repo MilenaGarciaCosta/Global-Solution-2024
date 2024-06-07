@@ -5,10 +5,10 @@
 ##### Justificativa
 ### A falta de conscientização ambiental das pessoas impede que façam a parte de cada um, em separar o lixo comum do reciclavel, e que façam o descarte de forma correta, isso se deve a varios fatores que podem influenciar:
 
-•	Fatores históricos já que o ser humano começou a se preocupar mais com o meio ambiente a partir de quando percebeu o quão sério é.
-•	Educação insuficiente, não promovendo a criação ideal para um ser humano consciente ao meio ambiente.
-•	Falta de visibilidade dos problemas, muitos dos impactos ambientais não são perceptiveis, principalmente as pessoas que cresceram em áreas urbanas, e não conseguem perceber os impactos que isso causa na natureza.
-•	Praticidade e imediatismo, nos mundos atuais com a evolução crescente da técnologia, as pessoas sempre buscam o mais fácil, isso pode explicar do porque muitos preferem jogar o lixo na rua, do que nas lixeiras que estão um pouco mais distante.
+### •	Fatores históricos já que o ser humano começou a se preocupar mais com o meio ambiente a partir de quando percebeu o quão sério é.
+### •	Educação insuficiente, não promovendo a criação ideal para um ser humano consciente ao meio ambiente.
+### •	Falta de visibilidade dos problemas, muitos dos impactos ambientais não são perceptiveis, principalmente as pessoas que cresceram em áreas urbanas, e não conseguem perceber os impactos que isso causa na natureza.
+### •	Praticidade e imediatismo, nos mundos atuais com a evolução crescente da técnologia, as pessoas sempre buscam o mais fácil, isso pode explicar do porque muitos preferem jogar o lixo na rua, do que nas lixeiras que estão um pouco mais distante.
 
 ##### Solução
 ### Esse site é dedicado para apresentar o problema em questão e as soluções que desenvolvemos, sendo elas:
